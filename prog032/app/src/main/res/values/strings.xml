@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Exercise Tracker</string>
+    <string name="running">Running</string>
+    <string name="biking">Biking</string>
+    <string name="rowing">Rowing</string>
+    <string name="free_weights">Free Weights</string>
+    <string name="stair_climbing">Stair Climbing</string>
+    <string name="back">Back</string>
+
 </resources>
