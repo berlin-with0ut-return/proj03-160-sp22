@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D7EEF8"
+    android:background="@drawable/background_grad"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,12 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Welcome back, Sherry"
-        android:textStyle="bold"
+        android:text="WELCOME BACK, SHERRY"
         android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="#0D5FA1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -27,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Exercise Minutes"
+        android:text="exercise minutes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/calBurnedTxt"
         app:layout_constraintTop_toBottomOf="@+id/mainGreeting" />
@@ -38,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Calories Burned"
+        android:text="calories burned"
         app:layout_constraintEnd_toStartOf="@+id/exerciseMinTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainGreeting" />
@@ -47,11 +46,11 @@
         android:id="@+id/recentActivityTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Recent Activities"
+        android:text="recent activities"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@+id/calBurnedBox" />
 
     <androidx.cardview.widget.CardView
@@ -109,10 +108,10 @@
         android:id="@+id/recentActivityBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:padding="30dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recentActivityTxt">
@@ -122,33 +121,78 @@
             android:layout_height="100dp"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
-            android:text="Running: 100 minutes\nBiking: 30 min\nRowing: 40 min" />
+            android:text="running: 100 minutes\nbiking: 30 min\nrowing: 40 min" />
 
     </androidx.cardview.widget.CardView>
 
-    <ImageButton
-        android:id="@+id/bodyDetailsIcon"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@color/white"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bodyDetailsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/addExerciseBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recentActivityBox"
         android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toStartOf="@+id/exerciseIcon"
-        app:srcCompat="@drawable/ic__286231816297299443941" />
+        app:layout_constraintTop_toBottomOf="@+id/recentActivityBox">
 
-    <ImageButton
-        android:id="@+id/exerciseIcon"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@color/white"
+        <ImageButton
+            android:id="@+id/bodyDetailsIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@color/white"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/exerciseIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recentActivityBox"
+            app:srcCompat="@drawable/ic__286231816297299443941" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addExerciseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:elevation="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bodyDetailsIcon"
-        app:layout_constraintTop_toBottomOf="@+id/recentActivityBox"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
         android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/ic__5598792321548328792__1_" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bodyDetailsBtn"
+        app:layout_constraintTop_toBottomOf="@+id/recentActivityBox">
+
+        <ImageButton
+            android:id="@+id/exerciseIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bodyDetailsIcon"
+            app:layout_constraintTop_toBottomOf="@+id/recentActivityBox"
+            app:srcCompat="@drawable/ic__5598792321548328792__1_" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="update stats"
+        app:layout_constraintEnd_toEndOf="@+id/bodyDetailsBtn"
+        app:layout_constraintStart_toStartOf="@+id/bodyDetailsBtn"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/bodyDetailsBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="add exercise"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/addExerciseBtn"
+        app:layout_constraintStart_toStartOf="@+id/addExerciseBtn"
+        app:layout_constraintTop_toBottomOf="@+id/addExerciseBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
