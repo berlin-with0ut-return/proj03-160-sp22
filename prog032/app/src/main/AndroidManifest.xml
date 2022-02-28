@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Prog03">
         <activity
+            android:name=".ChooseActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:label="Exercise Tracker"
-            android:exported="true">
+            android:exported="true"
+            android:label="Exercise Tracker">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
