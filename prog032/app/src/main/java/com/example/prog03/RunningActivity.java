@@ -1,9 +1,12 @@
 package com.example.prog03;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -25,10 +28,28 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_running);
 
+        // calling the action bar
+        ActionBar actionBar = getSupportActionBar();
+
+        // showing the back button in action bar
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         // Get the SupportMapFragment and request notification when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
+
+    // this event will enable the back
+    // function to the button on press
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -41,7 +62,6 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
     public void onMapReady(GoogleMap googleMap) {
 
         // Add polylines to the map.
-        // Polylines are useful to show a route or some other connection between points.
         Polyline polyline1 = googleMap.addPolyline(new PolylineOptions()
                 .clickable(true)
                 .add(
@@ -55,8 +75,7 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
                         new LatLng(37.8752393100443, -122.25894207551896),
                         new LatLng(37.876193, -122.259155)));
 
-        // Position the map's camera near Alice Springs in the center of Australia,
-        // and set the zoom factor so most of Australia shows on the screen.
+        // Position the map's camera
         mMap = googleMap;
         LatLng campus = new LatLng(37.876193, -122.259155);
         mMap.addMarker(new MarkerOptions().position(campus).title("Start"));

@@ -44,7 +44,7 @@ public class ChooseActivity extends AppCompatActivity {
     */
     private void goToRunning() {
 
-//        Intent intent = new Intent(this, MainActivity2.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, RunningActivity.class);
+        startActivity(intent);
     }
 }
