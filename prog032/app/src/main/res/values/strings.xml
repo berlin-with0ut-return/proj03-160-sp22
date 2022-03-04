@@ -17,4 +17,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_running">RunningActivity</string>
 
+    <string name="Distance_str">1.2 Miles</string>
+    <string name="Calories_str">102 Cals</string>
+    <string name="Steps_str">1846 Steps</string>
+    <string name="Time_str">20:45</string>
+
+
+
 </resources>
