@@ -51,10 +51,6 @@ public class ChooseActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    /*
-    * TODO: add intent to go to next page
-    */
     private void goToRunning() {
 
         Intent intent = new Intent(this, RunningActivity.class);

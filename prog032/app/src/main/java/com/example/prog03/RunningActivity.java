@@ -3,8 +3,12 @@ package com.example.prog03;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -20,6 +24,8 @@ import com.google.android.gms.maps.model.PolylineOptions;
 public class RunningActivity extends AppCompatActivity implements OnMapReadyCallback{
 
     private GoogleMap mMap;
+    //private static final int PERMISSIONS_REQUEST_ACTIVITY_RECOGNITION = 1;
+    //private boolean activityPermissionGranted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,8 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        //getActivityPermission();
+
     }
 
     // this event will enable the back
@@ -81,5 +89,40 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
         mMap.addMarker(new MarkerOptions().position(campus).title("Start"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(campus, 15));
 
+
     }
+
+    /*private void getActivityPermission() {
+
+        if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
+                android.Manifest.permission.ACTIVITY_RECOGNITION)
+                == PackageManager.PERMISSION_GRANTED) {
+            activityPermissionGranted = true;
+        } else if(ActivityCompat.shouldShowRequestPermissionRationale(
+                this, Manifest.permission.ACTIVITY_RECOGNITION)){
+            //Do something else idk
+
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.ACTIVITY_RECOGNITION},
+                    PERMISSIONS_REQUEST_ACTIVITY_RECOGNITION);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        activityPermissionGranted = false;
+        if (requestCode
+                == PERMISSIONS_REQUEST_ACTIVITY_RECOGNITION) {// If request is cancelled, the result arrays are empty.
+            if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                activityPermissionGranted = true;
+            }
+        } else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }*/
+
 }
