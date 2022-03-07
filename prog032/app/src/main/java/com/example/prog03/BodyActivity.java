@@ -17,17 +17,11 @@ public class BodyActivity extends AppCompatActivity {
     EditText weight;
     EditText age;
     Button save;
-    //Button back;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // calling the action bar
-        ActionBar actionBar = getSupportActionBar();
-
-        // showing the back button in action bar
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_main);
         feet = findViewById(R.id.Feet);
@@ -36,13 +30,13 @@ public class BodyActivity extends AppCompatActivity {
         weight = findViewById(R.id.Weight);
         age = findViewById(R.id.Age);
         save = findViewById(R.id.SaveButton);
-        /*back = findViewById(R.id.BackButton);
+        back = findViewById(R.id.BackButton);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
-        });*/
+        });
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
