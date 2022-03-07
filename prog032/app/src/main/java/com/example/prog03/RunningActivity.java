@@ -11,6 +11,8 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -24,8 +26,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 public class RunningActivity extends AppCompatActivity implements OnMapReadyCallback{
 
     private GoogleMap mMap;
-    //private static final int PERMISSIONS_REQUEST_ACTIVITY_RECOGNITION = 1;
-    //private boolean activityPermissionGranted;
+    private Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +35,17 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_running);
 
-        // calling the action bar
-        ActionBar actionBar = getSupportActionBar();
-
-        // showing the back button in action bar
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
         // Get the SupportMapFragment and request notification when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        //getActivityPermission();
+        back = (Button) findViewById(R.id.backButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
     }
 
@@ -92,37 +93,5 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
 
     }
 
-    /*private void getActivityPermission() {
-
-        if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
-                android.Manifest.permission.ACTIVITY_RECOGNITION)
-                == PackageManager.PERMISSION_GRANTED) {
-            activityPermissionGranted = true;
-        } else if(ActivityCompat.shouldShowRequestPermissionRationale(
-                this, Manifest.permission.ACTIVITY_RECOGNITION)){
-            //Do something else idk
-
-        } else {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{android.Manifest.permission.ACTIVITY_RECOGNITION},
-                    PERMISSIONS_REQUEST_ACTIVITY_RECOGNITION);
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String[] permissions,
-                                           @NonNull int[] grantResults) {
-        activityPermissionGranted = false;
-        if (requestCode
-                == PERMISSIONS_REQUEST_ACTIVITY_RECOGNITION) {// If request is cancelled, the result arrays are empty.
-            if (grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                activityPermissionGranted = true;
-            }
-        } else {
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-    }*/
 
 }
