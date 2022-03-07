@@ -23,14 +23,14 @@ public class BodyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_body);
         feet = findViewById(R.id.Feet);
         inches = findViewById(R.id.Inches);
         sex = findViewById(R.id.Sex);
         weight = findViewById(R.id.Weight);
         age = findViewById(R.id.Age);
-        save = findViewById(R.id.SaveButton);
-        back = findViewById(R.id.BackButton);
+        save = (Button) findViewById(R.id.SaveButton);
+        back = (Button) findViewById(R.id.BackButton);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
