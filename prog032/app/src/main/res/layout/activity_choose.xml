@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_grad"
     tools:context=".ChooseActivity">
 
     <Button
         android:id="@+id/running_button"
+        android:fontFamily="@font/poppins_regular"
         android:layout_width="295dp"
         android:layout_height="54dp"
         android:layout_marginTop="56dp"
@@ -17,7 +19,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
+        android:id="@+id/back_button"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_width="92dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/rowing_button"
+        android:fontFamily="@font/poppins_regular"
         android:layout_width="295dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
@@ -28,6 +43,7 @@
 
     <Button
         android:id="@+id/free_weights_button"
+        android:fontFamily="@font/poppins_regular"
         android:layout_width="295dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
@@ -38,6 +54,7 @@
 
     <Button
         android:id="@+id/stair_climbing_button"
+        android:fontFamily="@font/poppins_regular"
         android:layout_width="295dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
@@ -48,6 +65,7 @@
 
     <Button
         android:id="@+id/biking_button"
+        android:fontFamily="@font/poppins_regular"
         android:layout_width="295dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
@@ -58,6 +76,7 @@
 
     <TextView
         android:id="@+id/textView"
+        android:fontFamily="@font/poppins_regular"
         android:layout_width="215dp"
         android:layout_height="136dp"
         android:layout_marginTop="92dp"

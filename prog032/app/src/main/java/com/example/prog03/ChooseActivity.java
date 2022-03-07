@@ -19,18 +19,12 @@ public class ChooseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
 
-        // calling the action bar
-        ActionBar actionBar = getSupportActionBar();
-
-        // showing the back button in action bar
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
         running_button = (Button) findViewById(R.id.running_button);
         biking_button = (Button) findViewById(R.id.biking_button);
         rowing_button = (Button) findViewById(R.id.rowing_button);
         free_weights_button = (Button) findViewById(R.id.free_weights_button);
         stair_climbing_button = (Button) findViewById(R.id.stair_climbing_button);
-        //back_button = (Button) findViewById(R.id.back_button);
+        back_button = (Button) findViewById(R.id.back_button);
 
         running_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,16 +33,13 @@ public class ChooseActivity extends AppCompatActivity {
             }
         });
 
-    }
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToMain();
+            }
+        });
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     private void goToRunning() {
@@ -56,4 +47,11 @@ public class ChooseActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RunningActivity.class);
         startActivity(intent);
     }
+
+    private void goToMain() {
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

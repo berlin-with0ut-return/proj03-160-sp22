@@ -17,32 +17,26 @@ public class BodyActivity extends AppCompatActivity {
     EditText weight;
     EditText age;
     Button save;
-    //Button back;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // calling the action bar
-        ActionBar actionBar = getSupportActionBar();
-
-        // showing the back button in action bar
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_body);
         feet = findViewById(R.id.Feet);
         inches = findViewById(R.id.Inches);
         sex = findViewById(R.id.Sex);
         weight = findViewById(R.id.Weight);
         age = findViewById(R.id.Age);
-        save = findViewById(R.id.SaveButton);
-        /*back = findViewById(R.id.BackButton);
+        save = (Button) findViewById(R.id.SaveButton);
+        back = (Button) findViewById(R.id.BackButton);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
-        });*/
+        });
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,16 +48,6 @@ public class BodyActivity extends AppCompatActivity {
                 age.setHint(age.getText());
             }
         });
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 }
