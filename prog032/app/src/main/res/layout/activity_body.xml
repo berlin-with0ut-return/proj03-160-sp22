@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background_grad"
     android:layout_height="match_parent">
 
 
@@ -10,143 +11,152 @@
         android:id="@+id/textView2"
         android:layout_width="348dp"
         android:layout_height="84dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Enter/Edit Your Body Details"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Weight"
         android:layout_width="253dp"
         android:layout_height="48dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_regular"
         android:hint="Weight (lbs)"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/Age"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sex" />
 
     <EditText
         android:id="@+id/Feet"
-        android:layout_width="46dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="124dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_regular"
         android:hint="ft"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sex" />
+        app:layout_constraintEnd_toStartOf="@+id/Inches"
+        app:layout_constraintTop_toBottomOf="@+id/Age" />
 
     <Button
         android:id="@+id/SaveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="160dp"
+        android:layout_width="168dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Age" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Inches" />
 
     <EditText
         android:id="@+id/Age"
         android:layout_width="253dp"
         android:layout_height="48dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="396dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_regular"
         android:hint="Age (Years)"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Weight" />
 
     <EditText
         android:id="@+id/Sex"
         android:layout_width="251dp"
         android:layout_height="44dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_regular"
         android:hint="Sex"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="87dp"
         android:layout_height="42dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="396dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Age"
         android:textAlignment="center"
         android:textColor="#673AB7"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/Age"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Age" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="87dp"
         android:layout_height="42dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="33dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Height"
         android:textAlignment="center"
         android:textColor="#673AB7"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/Feet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Feet" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="87dp"
         android:layout_height="42dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Weight"
         android:textAlignment="center"
         android:textColor="#673AB7"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/Weight"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Weight" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="87dp"
         android:layout_height="42dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Sex"
         android:textAlignment="center"
         android:textColor="#673AB7"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/Sex"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/Inches"
-        android:layout_width="46dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="28dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="148dp"
+        android:layout_marginEnd="152dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_regular"
         android:hint="in"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Feet"
-        app:layout_constraintTop_toBottomOf="@+id/Sex" />
+        app:layout_constraintTop_toBottomOf="@+id/Age" />
 
     <Button
         android:id="@+id/BackButton"
@@ -154,6 +164,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
