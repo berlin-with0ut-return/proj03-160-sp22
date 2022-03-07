@@ -13,9 +13,8 @@
         android:layout_height="84dp"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Enter/Edit Your Body Details"
+        android:text="EDIT BODY DETAILS"
         android:textAlignment="center"
-        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +56,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/Inches" />
 
     <EditText
@@ -93,7 +94,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="Age"
         android:textAlignment="center"
-        android:textColor="#673AB7"
+        android:textColor="#0A73B8"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/Age"
@@ -108,7 +109,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="Height"
         android:textAlignment="center"
-        android:textColor="#673AB7"
+        android:textColor="#0A73B8"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/Feet"
@@ -122,7 +123,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="Weight"
         android:textAlignment="center"
-        android:textColor="#673AB7"
+        android:textColor="#0A73B8"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/Weight"
@@ -138,7 +139,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="Sex"
         android:textAlignment="center"
-        android:textColor="#673AB7"
+        android:textColor="#0A73B8"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/Sex"
@@ -167,6 +168,8 @@
         android:fontFamily="@font/poppins_regular"
         android:text="Back"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

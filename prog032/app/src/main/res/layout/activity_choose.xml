@@ -12,10 +12,13 @@
         android:fontFamily="@font/poppins_regular"
         android:layout_width="295dp"
         android:layout_height="54dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="40dp"
         android:text="@string/running"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/biking_button"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
@@ -28,6 +31,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -39,6 +44,9 @@
         android:text="@string/rowing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/free_weights_button"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/biking_button" />
 
     <Button
@@ -50,17 +58,24 @@
         android:text="@string/free_weights"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/stair_climbing_button"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/rowing_button" />
 
     <Button
         android:id="@+id/stair_climbing_button"
-        android:fontFamily="@font/poppins_regular"
         android:layout_width="295dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="@string/stair_climbing"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/free_weights_button" />
 
     <Button
@@ -72,17 +87,20 @@
         android:text="@string/biking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rowing_button"
+        android:textColor="#0A73B8"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/running_button" />
 
     <TextView
         android:id="@+id/textView"
         android:fontFamily="@font/poppins_regular"
-        android:layout_width="215dp"
-        android:layout_height="136dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
         android:gravity="center_horizontal"
-        android:text="What Would You Like To Record?"
-        android:textSize="34sp"
+        android:text="RECORD EXERCISE"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
