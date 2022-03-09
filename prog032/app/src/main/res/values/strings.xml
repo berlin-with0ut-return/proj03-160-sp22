@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Exercise Tracker</string>
-    <string name="running">Running</string>
-    <string name="biking">Biking</string>
-    <string name="rowing">Rowing</string>
-    <string name="free_weights">Free Weights</string>
-    <string name="stair_climbing">Stair Climbing</string>
+    <string name="running">Running 👟</string>
+    <string name="biking">Biking 🚲</string>
+    <string name="rowing">Rowing 🛥</string>
+    <string name="free_weights">Free Weights 𐄷</string>
+    <string name="stair_climbing">Stair Climbing ▙</string>
     <string name="back">Back</string>
     <string name="title_activity_body">BodyActivity</string>
     <!-- Strings used for fragments for navigation -->
@@ -17,10 +17,10 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_running">RunningActivity</string>
 
-    <string name="Distance_str">1.2 Miles</string>
-    <string name="Calories_str">102 Cals</string>
-    <string name="Steps_str">1846 Steps</string>
-    <string name="Time_str">20:45</string>
+    <string name="Distance_str">1.2 Miles📏</string>
+    <string name="Calories_str">102 Cals🔥</string>
+    <string name="Steps_str">1846 Steps👣</string>
+    <string name="Time_str">20:45🕑</string>
 
 
 
