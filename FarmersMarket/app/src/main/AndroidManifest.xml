@@ -10,6 +10,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmersMarket">
         <activity
+            android:name=".Review"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseStand"
+            android:exported="false" />
+        <activity
+            android:name=".SelectFarmersMarket2"
+            android:exported="false" />
+        <activity
+            android:name=".SelectNorthMarket"
+            android:exported="false" />
+        <activity
+            android:name=".SelectFarmersMarket"
+            android:exported="false" />
+        <activity
+            android:name=".Account"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".LogIn"
+            android:exported="false" />
+        <activity
             android:name=".HomeScreen"
             android:exported="false" />
     </application>
