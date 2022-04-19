@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmersMarket">
         <activity
+            android:name=".ItemDetails"
+            android:exported="false"
+            android:label="@string/title_activity_item_details"
+            android:theme="@style/Theme.FarmersMarket.NoActionBar" />
+        <activity
             android:name=".HomeScreen"
             android:exported="false" />
     </application>
