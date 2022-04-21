@@ -8,17 +8,71 @@
     tools:context=".HomeScreen">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginBtn"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Log In"
+        android:textColor="@color/light_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/createActBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <Button
+        android:id="@+id/createActBtn"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Create Account"
+        android:textColor="@color/light_green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        app:layout_constraintStart_toStartOf="@+id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    <Button
+        android:id="@+id/guestBtn"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Continue as Guest"
+        android:textColor="@color/light_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/createActBtn"
+        app:layout_constraintStart_toStartOf="@+id/createActBtn"
+        app:layout_constraintTop_toBottomOf="@+id/createActBtn" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="134dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/broccoli" />
+
+    <TextView
+        android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:backgroundTint="@color/white"
-        android:text="Log In"
-        android:textSize="40dp"
         android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/dark_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Friendly Farmer"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
