@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/signUpTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_default"
@@ -30,41 +35,390 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/bellPepperCard"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/eggCard"
+        app:layout_constraintTop_toBottomOf="@+id/signUpTxt">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/bellPepperImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/bell_pepper" />
+
+            <TextView
+                android:id="@+id/bellPepperTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Bell Pepper"
+                app:layout_constraintStart_toStartOf="@id/bellPepperImg"
+                app:layout_constraintEnd_toEndOf="@id/bellPepperImg"
+                app:layout_constraintTop_toBottomOf="@id/bellPepperImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bellPepperPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$1.99"
+                app:layout_constraintStart_toStartOf="@id/bellPepperTxt"
+                app:layout_constraintEnd_toEndOf="@id/bellPepperTxt"
+                app:layout_constraintTop_toBottomOf="@id/bellPepperTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/bellPepperImg"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/bell_pepper"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="113dp" />
-
-    <TextView
-        android:id="@+id/bellPepperTxt"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/eggCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bell Pepper"
-        android:fontFamily="@font/montserrat_default"
-        app:layout_constraintStart_toStartOf="@+id/bellPepperImg"
-        app:layout_constraintEnd_toEndOf="@+id/bellPepperImg"
-        app:layout_constraintTop_toBottomOf="@+id/bellPepperImg"
-        android:textColor="@color/black"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bellPepperCard"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/signUpTxt">
 
-    <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/eggImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/eggs" />
+
+            <TextView
+                android:id="@+id/eggTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Eggs"
+                app:layout_constraintStart_toStartOf="@id/eggImg"
+                app:layout_constraintEnd_toEndOf="@id/eggImg"
+                app:layout_constraintTop_toBottomOf="@id/eggImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/eggPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$2.99"
+                app:layout_constraintStart_toStartOf="@id/eggTxt"
+                app:layout_constraintEnd_toEndOf="@id/eggTxt"
+                app:layout_constraintTop_toBottomOf="@id/eggTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gingerCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$1.99"
-        android:fontFamily="@font/montserrat_bold"
-        app:layout_constraintStart_toStartOf="@+id/bellPepperTxt"
-        app:layout_constraintEnd_toEndOf="@+id/bellPepperTxt"
-        app:layout_constraintTop_toBottomOf="@+id/bellPepperTxt"
-        android:textColor="@color/gray"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bananaCard"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/bellPepperCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/gingerImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ginger" />
+
+            <TextView
+                android:id="@+id/gingerTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Ginger"
+                app:layout_constraintStart_toStartOf="@id/gingerImg"
+                app:layout_constraintEnd_toEndOf="@id/gingerImg"
+                app:layout_constraintTop_toBottomOf="@id/gingerImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/gingerPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$0.99"
+                app:layout_constraintStart_toStartOf="@id/gingerTxt"
+                app:layout_constraintEnd_toEndOf="@id/gingerTxt"
+                app:layout_constraintTop_toBottomOf="@id/gingerTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bananaCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/gingerCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/eggCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/bananaImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/bananas" />
+
+            <TextView
+                android:id="@+id/bananaTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Bananas"
+                app:layout_constraintStart_toStartOf="@id/bananaImg"
+                app:layout_constraintEnd_toEndOf="@id/bananaImg"
+                app:layout_constraintTop_toBottomOf="@id/bananaImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bananaPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$2.99"
+                app:layout_constraintStart_toStartOf="@id/bananaTxt"
+                app:layout_constraintEnd_toEndOf="@id/bananaTxt"
+                app:layout_constraintTop_toBottomOf="@id/bananaTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appleCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bananaCard"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/gingerCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/appleImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/apples" />
+
+            <TextView
+                android:id="@+id/appleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Apples"
+                app:layout_constraintStart_toStartOf="@id/appleImg"
+                app:layout_constraintEnd_toEndOf="@id/appleImg"
+                app:layout_constraintTop_toBottomOf="@id/appleImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/applePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$3.99"
+                app:layout_constraintStart_toStartOf="@id/appleTxt"
+                app:layout_constraintEnd_toEndOf="@id/appleTxt"
+                app:layout_constraintTop_toBottomOf="@id/appleTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lettuceCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/appleCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/bananaCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/lettuceImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/lettuce" />
+
+            <TextView
+                android:id="@+id/lettuceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Romaine Lettuce"
+                app:layout_constraintStart_toStartOf="@id/lettuceImg"
+                app:layout_constraintEnd_toEndOf="@id/lettuceImg"
+                app:layout_constraintTop_toBottomOf="@id/lettuceImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lettucePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$1.59"
+                app:layout_constraintStart_toStartOf="@id/lettuceTxt"
+                app:layout_constraintEnd_toEndOf="@id/lettuceTxt"
+                app:layout_constraintTop_toBottomOf="@id/lettuceTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/kaleCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/orangeCard"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/appleCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/kaleImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/kale" />
+
+            <TextView
+                android:id="@+id/kaleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Kale"
+                app:layout_constraintStart_toStartOf="@id/kaleImg"
+                app:layout_constraintEnd_toEndOf="@id/kaleImg"
+                app:layout_constraintTop_toBottomOf="@id/kaleImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/kalePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$3.29"
+                app:layout_constraintStart_toStartOf="@id/kaleTxt"
+                app:layout_constraintEnd_toEndOf="@id/kaleTxt"
+                app:layout_constraintTop_toBottomOf="@id/kaleTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/orangeCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/kaleCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/lettuceCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/orangeImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/lettuce" />
+
+            <TextView
+                android:id="@+id/orangeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Oranges"
+                app:layout_constraintStart_toStartOf="@id/orangeImg"
+                app:layout_constraintEnd_toEndOf="@id/orangeImg"
+                app:layout_constraintTop_toBottomOf="@id/orangeImg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/orangePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="$5.79"
+                app:layout_constraintStart_toStartOf="@id/orangeTxt"
+                app:layout_constraintEnd_toEndOf="@id/orangeTxt"
+                app:layout_constraintTop_toBottomOf="@id/orangeTxt"
+                android:textColor="@color/gray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

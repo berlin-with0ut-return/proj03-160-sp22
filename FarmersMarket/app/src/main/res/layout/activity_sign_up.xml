@@ -8,137 +8,145 @@
 
     <Button
         android:id="@+id/BackButton"
-        android:layout_width="58dp"
-        android:layout_height="31dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Back"
-        android:textSize="8"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/SignInButton"
-        android:layout_width="61dp"
-        android:layout_height="30"
-        android:layout_marginStart="131dp"
-        android:layout_marginBottom="37dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Sign In"
-        android:textSize="6"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/signInTxt"
+        android:layout_marginTop="10dp"
+        />
 
     <Button
         android:id="@+id/SignUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Sign Up"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/montserrat_default"
+        android:hint="username"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTxt" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/montserrat_default"
+        android:hint="example@gmail.com"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailSignupTxt" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="37dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="**********"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/SignUpButton"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/signInTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_default"
         android:text="Already Have An Account?"
-        app:layout_constraintBottom_toTopOf="@+id/SignInButton"
-        app:layout_constraintStart_toStartOf="@+id/SignInButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignUpButton" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="224dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="43dp"
+        android:id="@+id/instrCredTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_default"
         android:text="Enter Your Credentials to Continue"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpTxt" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="72dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="12dp"
+        android:id="@+id/usernameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Username"
         android:textColor="#020202"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/instrCredTxt" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="49dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="7dp"
+        android:id="@+id/emailSignupTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Email"
         android:textColor="#020202"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="84dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Password"
         android:textColor="#020202"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/signUpTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="141dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Sign Up"
-        android:textColor="#121212"
+        android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

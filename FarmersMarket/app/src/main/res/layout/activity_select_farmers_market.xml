@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="184dp"
         android:text="Select"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -28,10 +29,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/signUpTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select a Farmer's Market"
+        android:fontFamily="@font/montserrat_default"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +41,10 @@
         app:layout_constraintVertical_bias="0.817" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/kakiImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/signUpTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
