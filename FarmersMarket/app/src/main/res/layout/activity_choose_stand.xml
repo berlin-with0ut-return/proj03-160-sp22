@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ChooseStand">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/titleTxt"
         android:layout_width="wrap_content"
@@ -23,7 +33,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="409dp"
         android:layout_height="587dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -34,12 +44,47 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/frogHollowTxt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Frog Hollow Farms"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.021"
+                app:layout_constraintStart_toEndOf="@+id/frogImg"
+                app:layout_constraintTop_toBottomOf="@+id/meatTxt" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@+id/massaOrganicsTxt"
+                app:layout_constraintHorizontal_bias="0.446"
+                app:layout_constraintStart_toStartOf="@+id/massaOrganicsTxt"
+                app:layout_constraintTop_toBottomOf="@+id/oyaImg" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.446"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blue_heron" />
+
+            <TextView
                 android:id="@+id/produceTxt"
                 android:layout_width="394dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Produce"
                 android:fontFamily="@font/montserrat_default"
+                android:text="Produce"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -104,10 +149,10 @@
                 android:id="@+id/meatTxt"
                 android:layout_width="394dp"
                 android:layout_height="25dp"
-                android:layout_marginTop="408dp"
+                android:layout_marginTop="544dp"
                 android:layout_weight="1"
-                android:text="Meat"
                 android:fontFamily="@font/montserrat_default"
+                android:text="Meat"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +162,7 @@
                 android:id="@+id/frogImg"
                 android:layout_width="86dp"
                 android:layout_height="93dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="28dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.052"
                 app:layout_constraintStart_toStartOf="parent"
@@ -129,13 +174,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="4dp"
-                android:text="Frog Hollow Farms"
+                android:layout_marginTop="28dp"
                 android:fontFamily="@font/montserrat_default"
+                android:text="Frog Hollow Farms"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.006"
+                app:layout_constraintHorizontal_bias="0.021"
                 app:layout_constraintStart_toEndOf="@+id/frogImg"
                 app:layout_constraintTop_toBottomOf="@+id/meatTxt" />
+
+            <ImageView
+                android:id="@+id/blue_heron"
+                android:layout_width="86dp"
+                android:layout_height="93dp"
+
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/oyaImg"
+                app:srcCompat="@drawable/blue_heron" />
 
             <TextView
                 android:id="@+id/kakiFarmsTxt"
@@ -143,8 +200,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:text="Kaki Farms"
                 android:fontFamily="@font/montserrat_default"
+                android:text="Kaki Farms"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.004"
                 app:layout_constraintStart_toEndOf="@+id/kakiImg"
@@ -156,20 +213,33 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="112dp"
-                android:text="Oya Organics"
                 android:fontFamily="@font/montserrat_default"
+                android:text="Oya Organics"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.005"
                 app:layout_constraintStart_toEndOf="@+id/oyaImg"
                 app:layout_constraintTop_toBottomOf="@+id/massaOrganicsTxt" />
 
             <TextView
+                android:id="@+id/oyaOrganicsTxt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_default"
+                android:text="Blue Heron"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintStart_toEndOf="@+id/oyaImg"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <TextView
                 android:id="@+id/massaOrganicsTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="108dp"
-                android:text="Massa Organics"
                 android:fontFamily="@font/montserrat_default"
+                android:text="Massa Organics"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.16"
                 app:layout_constraintStart_toEndOf="@+id/massaImg"

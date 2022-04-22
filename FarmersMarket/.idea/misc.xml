@@ -3,21 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1965" />
-        <entry key="app/src/main/res/drawable/broccoli.xml" value="0.1965" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1965" />
-        <entry key="app/src/main/res/layout/activity_account.xml" value="0.3135726928710938" />
-        <entry key="app/src/main/res/layout/activity_choose_stand.xml" value="0.2514444986979167" />
-        <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.28222757975260415" />
-        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.36138407389322913" />
+        <entry key="app/src/main/res/layout/activity_account.xml" value="0.17904495502073833" />
+        <entry key="app/src/main/res/layout/activity_choose_stand.xml" value="0.41007194244604317" />
+        <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.23385416666666667" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23385416666666667" />
-        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.37150828043619794" />
-        <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.23385416666666667" />
-        <entry key="app/src/main/res/layout/activity_review.xml" value="0.23385416666666667" />
-        <entry key="app/src/main/res/layout/activity_select_farmers_market.xml" value="0.23385416666666667" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.21979166666666666" />
+        <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.24230072463768115" />
+        <entry key="app/src/main/res/layout/activity_select_farmers_market.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_select_farmers_market2.xml" value="0.21979166666666666" />
-        <entry key="app/src/main/res/layout/activity_select_north_market.xml" value="0.23385416666666667" />
-        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.32620340983072915" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2620559692382814" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/homescreen.xml" value="0.23385416666666667" />
