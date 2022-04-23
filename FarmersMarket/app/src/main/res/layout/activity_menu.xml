@@ -246,7 +246,7 @@
                 android:layout_height="150dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:src="@drawable/apples" />
+                android:src="@drawable/review_apple" />
 
             <TextView
                 android:id="@+id/appleTxt"

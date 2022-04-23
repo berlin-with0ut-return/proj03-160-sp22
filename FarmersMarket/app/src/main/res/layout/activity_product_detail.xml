@@ -6,4 +6,305 @@
     android:layout_height="match_parent"
     tools:context=".ProductDetail">
 
+    <ImageView
+        android:id="@+id/star9"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/reviews"
+        app:layout_constraintTop_toBottomOf="@+id/review1"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star11"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star10"
+        app:layout_constraintTop_toTopOf="@+id/star9"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star12"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star11"
+        app:layout_constraintTop_toTopOf="@+id/star9"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/empty_star2"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star12"
+        app:layout_constraintTop_toTopOf="@+id/star9"
+        app:srcCompat="@drawable/unfilled_star" />
+
+    <ImageView
+        android:id="@+id/star10"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star9"
+        app:layout_constraintTop_toTopOf="@+id/star9"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/reviews"
+        app:layout_constraintTop_toBottomOf="@+id/reviews"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star4"
+        app:layout_constraintTop_toTopOf="@+id/star4"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star6"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star5"
+        app:layout_constraintTop_toTopOf="@+id/star4"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star7"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star6"
+        app:layout_constraintTop_toTopOf="@+id/star4"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star8"
+        android:layout_width="15dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@+id/star7"
+        app:layout_constraintTop_toTopOf="@+id/star4"
+        app:srcCompat="@drawable/filled_star" />
+
+    <TextView
+        android:id="@+id/product_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Product Details"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep1" />
+
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Recent Reviews:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details" />
+
+    <TextView
+        android:id="@+id/reviews2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="More Reviews >"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review2" />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Approximately 3 appled/lb. Grown and harvested in Berkeley. Fuji strain."
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_details" />
+
+    <TextView
+        android:id="@+id/review1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="These apples were so fresh and delicious!"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/star4"
+        app:layout_constraintTop_toBottomOf="@+id/star4" />
+
+    <TextView
+        android:id="@+id/review2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Great value but a few apples were a little mushy"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/star9"
+        app:layout_constraintTop_toBottomOf="@+id/star9" />
+
+    <View
+        android:id="@+id/apple_frame"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:background="#DFDFDF"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/sep1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="112dp"
+        android:background="@color/gray"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apple_frame" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/review_button"
+        android:layout_width="378dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="12dp"
+        android:text="Leave A Review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/apple_image"
+        android:layout_width="309dp"
+        android:layout_height="286dp"
+        app:layout_constraintBottom_toBottomOf="@+id/apple_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/apple_frame"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/review_apple" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Apple"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apple_frame" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="$0.99"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="332dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <TextView
+        android:id="@+id/units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="1 Apple"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/item_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+    <ImageView
+        android:id="@+id/star0"
+        android:layout_width="23dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/units"
+        app:layout_constraintTop_toBottomOf="@+id/units"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="23dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/star0"
+        app:layout_constraintTop_toTopOf="@+id/star0"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="23dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/star1"
+        app:layout_constraintTop_toTopOf="@+id/star0"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="23dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/star2"
+        app:layout_constraintTop_toTopOf="@+id/star0"
+        app:srcCompat="@drawable/filled_star" />
+
+    <ImageView
+        android:id="@+id/empty_star0"
+        android:layout_width="23dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/star3"
+        app:layout_constraintTop_toTopOf="@+id/star0"
+        app:srcCompat="@drawable/unfilled_star" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
