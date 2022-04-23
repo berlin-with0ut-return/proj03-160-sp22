@@ -40,7 +40,7 @@
         android:fontFamily="@font/montserrat_bold"
         android:text="Rate"
         android:textColor="@color/black"
-        android:textSize="22sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sep" />
 
@@ -67,12 +67,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="378dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="12dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <View
         android:id="@+id/apple_frame3"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_alignParentTop="true"
-        android:background="#DFDFDF"
+        android:background="@drawable/bottom_rounded_corner_view"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:progressTint="@color/dark_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,6 +114,7 @@
         android:layout_width="351dp"
         android:layout_height="151dp"
         android:layout_marginTop="4dp"
+        android:background="@null"
         app:boxStrokeColor="#00FFFFFF"
         app:boxStrokeErrorColor="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,8 +124,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="346dp"
             android:layout_height="150dp"
-            android:alpha=".5"
-            android:background="#DFDFDF"
+            android:background="@drawable/rounded_corner_view"
             android:hint="Leave A Review" />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
