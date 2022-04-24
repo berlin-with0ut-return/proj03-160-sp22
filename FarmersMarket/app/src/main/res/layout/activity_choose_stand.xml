@@ -43,6 +43,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/frog_button"
+                android:layout_width="371dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="28dp"
+                android:background="@android:color/transparent"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.394"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meatTxt" />
+
             <TextView
                 android:id="@+id/frogHollowTxt2"
                 android:layout_width="wrap_content"
@@ -103,6 +115,7 @@
                 app:srcCompat="@drawable/kaki_farms" />
 
             <View
+                android:id="@+id/view4"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="16dp"
@@ -206,6 +219,55 @@
                 app:layout_constraintHorizontal_bias="0.004"
                 app:layout_constraintStart_toEndOf="@+id/kakiImg"
                 app:layout_constraintTop_toBottomOf="@+id/produceTxt" />
+
+
+            <Button
+                android:id="@+id/kaki_button"
+                android:layout_width="371dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.394"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/produceTxt" />
+
+            <Button
+                android:id="@+id/massa_button"
+                android:layout_width="371dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.394"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <Button
+                android:id="@+id/oya_button"
+                android:layout_width="371dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.394"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <Button
+                android:id="@+id/blue_button"
+                android:layout_width="371dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.394"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
 
             <TextView
                 android:id="@+id/oyaOrganicsTxt"

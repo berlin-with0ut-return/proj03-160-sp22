@@ -3,10 +3,12 @@ package com.example.farmersmarket;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -26,6 +28,18 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
         dropdown.setOnItemSelectedListener(this);
         newview = findViewById(R.id.marketinfo);
 
+        Button button = (Button) findViewById(R.id.button3);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openChooseStand();
+            }
+        });
+    }
+
+    public void openChooseStand() {
+        Intent intent = new Intent(this, ChooseStand.class);
+        startActivity(intent);
     }
 
     @Override
@@ -52,13 +66,7 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
     }
 
     private void createNewTextView(String text) {
-//        final ConstraintLayout.LayoutParams lparams = new ConstraintLayout.LayoutParams(
-//                ConstraintLayout.LayoutParams.WRAP_CONTENT,
-//                ConstraintLayout.LayoutParams.WRAP_CONTENT);
-//        final TextView textView = new TextView(this);
-//        newview.setLayoutParams(lparams);
         newview.setText(text);
-//        return textView;
     }
 
     private void displayMap(int selection) {
