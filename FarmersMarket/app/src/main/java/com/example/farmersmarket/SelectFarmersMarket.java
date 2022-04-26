@@ -95,11 +95,10 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
         LatLng north = new LatLng(37.880266, -122.269251);
         LatLng south = new LatLng(37.847737, -122.271956);
         LatLng downtown = new LatLng(37.869797, -122.271868);
-        LatLng centerish = new LatLng(37.870880, -122.267736);
         mMap.addMarker(new MarkerOptions().position(north).title("North Berkeley Farmers' Market"));
         mMap.addMarker(new MarkerOptions().position(south).title("South Berkeley Farmers' Market"));
         mMap.addMarker(new MarkerOptions().position(downtown).title("Downtown Berkeley Farmers' Market"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centerish, 15));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(north, 15));
 
 
     }

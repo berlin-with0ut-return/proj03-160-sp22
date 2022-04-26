@@ -14,7 +14,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Button button = (Button) findViewById(R.id.back_button);
+        Button button = (Button) findViewById(R.id.button);
         CardView apple = (CardView) findViewById(R.id.appleCard);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
