@@ -41,7 +41,7 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
-        dropdown.setSelection(0);
+        //dropdown.setSelection(0);
         dropdown.setOnItemSelectedListener(this);
         newview = findViewById(R.id.marketinfo);
 
