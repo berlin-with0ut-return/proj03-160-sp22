@@ -14,24 +14,24 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        Button button = (Button) findViewById(R.id.guestBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button back = (Button) findViewById(R.id.guestBtn);
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSelectMarket();
             }
         });
 
-        Button button1 = (Button) findViewById(R.id.loginBtn);
-        button1.setOnClickListener(new View.OnClickListener() {
+        Button login = (Button) findViewById(R.id.loginBtn);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openLogIn();
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.createActBtn);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button account = (Button) findViewById(R.id.createActBtn);
+        account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSignUp();
