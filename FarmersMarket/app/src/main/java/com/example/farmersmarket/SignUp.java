@@ -25,7 +25,7 @@ public class SignUp extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                goToHomeScreen();
             }
         });
 
@@ -43,6 +43,11 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void goToHomeScreen() {
+        Intent intent = new Intent(this, HomeScreen.class);
+        startActivity(intent);
     }
 
     private void goToLogIn() {
