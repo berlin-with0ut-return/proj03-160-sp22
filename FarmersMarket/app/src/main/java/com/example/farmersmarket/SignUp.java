@@ -32,7 +32,7 @@ public class SignUp extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToChooseStand();
+                goToSelectFarmersMarket();
             }
         });
 
@@ -49,8 +49,8 @@ public class SignUp extends AppCompatActivity {
         Intent intent = new Intent(this, LogIn.class);
         startActivity(intent);
     }
-    private void goToChooseStand() {
-        Intent intent = new Intent(this, ChooseStand.class);
+    private void goToSelectFarmersMarket() {
+        Intent intent = new Intent(this, SelectFarmersMarket.class);
         startActivity(intent);
     }
 }
