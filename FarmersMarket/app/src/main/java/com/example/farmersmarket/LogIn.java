@@ -19,7 +19,7 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
 
         logIn = (Button) findViewById(R.id.LogInButton);
-        signUp = (Button) findViewById(R.id.SignInButton);
+        signUp = (Button) findViewById(R.id.SignUpButton);
 
         back = (Button) findViewById(R.id.BackButton);
         back.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +43,11 @@ public class LogIn extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void goToHomeScreen() {
+        Intent intent = new Intent(this, HomeScreen.class);
+        startActivity(intent);
     }
 
     private void goToSignUp() {
