@@ -32,7 +32,7 @@ public class LogIn extends AppCompatActivity {
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToHomeScreen();
+                goToChooseStand();
             }
         });
 
@@ -49,8 +49,8 @@ public class LogIn extends AppCompatActivity {
         Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
-    private void goToHomeScreen() {
-        Intent intent = new Intent(this, HomeScreen.class);
+    private void goToChooseStand() {
+        Intent intent = new Intent(this, ChooseStand.class);
         startActivity(intent);
     }
 }
