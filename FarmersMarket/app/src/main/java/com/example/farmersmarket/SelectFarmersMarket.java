@@ -12,12 +12,29 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class SelectFarmersMarket extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
+
+public class SelectFarmersMarket extends AppCompatActivity implements AdapterView.OnItemSelectedListener, OnMapReadyCallback {
     TextView newview;
+    private GoogleMap mMap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_farmers_market);
+
+        // Map Stuff
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
         Spinner dropdown = findViewById(R.id.spinner);
         String[] items = new String[]{"South Berkeley - Tuesday", "North Berkeley - Thursday", "Downtown Berkeley - Saturday"};
@@ -47,7 +64,7 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
         String text;
         switch (position) {
             case 0:
-                displayMap(0);
+
                 text = "Hours and Location: \nAdeline Street and 63rd Street \nTuesdays 2 pm - 6:30 pm year-round";
                 createNewTextView(text);
                 break;
@@ -69,8 +86,36 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
         newview.setText(text);
     }
 
-    private void displayMap(int selection) {
-        // TODO (MAX)
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        // Position the map's camera
+        mMap = googleMap;
+        LatLng north = new LatLng(37.880266, -122.269251);
+        LatLng south = new LatLng(37.847737, -122.271956);
+        LatLng downtown = new LatLng(37.869797, -122.271868);
+        LatLng centerish = new LatLng(37.870880, -122.267736);
+        mMap.addMarker(new MarkerOptions().position(north).title("North Berkeley Farmers' Market"));
+        mMap.addMarker(new MarkerOptions().position(south).title("South Berkeley Farmers' Market"));
+        mMap.addMarker(new MarkerOptions().position(downtown).title("Downtown Berkeley Farmers' Market"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centerish, 15));
+
+
+    }
+
+    private void displayMap(int index) {
+
+        LatLng north = new LatLng(37.880266, -122.269251);
+        LatLng south = new LatLng(37.847737, -122.271956);
+        LatLng downtown = new LatLng(37.869797, -122.271868);
+        if (index == 0) {
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(south, 15));
+        } else if (index == 1) {
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(north, 15));
+        } else {
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(downtown, 15));
+        }
+
     }
 
     @Override

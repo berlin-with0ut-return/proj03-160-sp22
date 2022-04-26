@@ -39,6 +39,8 @@ public class RunningActivity extends AppCompatActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
         back = (Button) findViewById(R.id.backButton);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
