@@ -18,7 +18,7 @@ public class ProductDetail extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openChooseStand();
+                openMenu();
             }
         });
 
@@ -36,8 +36,8 @@ public class ProductDetail extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openChooseStand() {
-        Intent intent = new Intent(this, ChooseStand.class);
+    public void openMenu() {
+        Intent intent = new Intent(this, Menu.class);
         startActivity(intent);
     }
 }
