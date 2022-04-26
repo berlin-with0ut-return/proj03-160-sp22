@@ -25,6 +25,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 public class SelectFarmersMarket extends AppCompatActivity implements AdapterView.OnItemSelectedListener, OnMapReadyCallback {
     TextView newview;
     private GoogleMap mMap;
+    private boolean isMapReady = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,7 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
         setContentView(R.layout.activity_select_farmers_market);
 
         // Map Stuff
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         Spinner dropdown = findViewById(R.id.spinner);
@@ -64,7 +64,7 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
         String text;
         switch (position) {
             case 0:
-
+                displayMap(0);
                 text = "Hours and Location: \nAdeline Street and 63rd Street \nTuesdays 2 pm - 6:30 pm year-round";
                 createNewTextView(text);
                 break;
@@ -90,6 +90,7 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
     public void onMapReady(GoogleMap googleMap) {
 
         // Position the map's camera
+        isMapReady = true;
         mMap = googleMap;
         LatLng north = new LatLng(37.880266, -122.269251);
         LatLng south = new LatLng(37.847737, -122.271956);
@@ -104,18 +105,18 @@ public class SelectFarmersMarket extends AppCompatActivity implements AdapterVie
     }
 
     private void displayMap(int index) {
-
-        LatLng north = new LatLng(37.880266, -122.269251);
-        LatLng south = new LatLng(37.847737, -122.271956);
-        LatLng downtown = new LatLng(37.869797, -122.271868);
-        if (index == 0) {
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(south, 15));
-        } else if (index == 1) {
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(north, 15));
-        } else {
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(downtown, 15));
+        if (isMapReady) {
+            LatLng north = new LatLng(37.880266, -122.269251);
+            LatLng south = new LatLng(37.847737, -122.271956);
+            LatLng downtown = new LatLng(37.869797, -122.271868);
+            if (index == 0) {
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(south, 15));
+            } else if (index == 1) {
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(north, 15));
+            } else {
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(downtown, 15));
+            }
         }
-
     }
 
     @Override
