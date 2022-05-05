@@ -63,7 +63,7 @@
                 android:fontFamily="@font/montserrat_default"
                 android:text="Frog Hollow Farms"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.021"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/frogImg"
                 app:layout_constraintTop_toBottomOf="@+id/meatTxt" />
 
@@ -181,19 +181,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/meatTxt"
                 app:srcCompat="@drawable/frog_hollow" />
 
-            <TextView
-                android:id="@+id/frogHollowTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="28dp"
-                android:fontFamily="@font/montserrat_default"
-                android:text="Frog Hollow Farms"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.021"
-                app:layout_constraintStart_toEndOf="@+id/frogImg"
-                app:layout_constraintTop_toBottomOf="@+id/meatTxt" />
-
             <ImageView
                 android:id="@+id/blue_heron"
                 android:layout_width="86dp"
@@ -305,6 +292,68 @@
                 app:layout_constraintHorizontal_bias="0.16"
                 app:layout_constraintStart_toEndOf="@+id/massaImg"
                 app:layout_constraintTop_toBottomOf="@+id/kakiFarmsTxt" />
+
+            <TextView
+                android:id="@+id/kaki_summary"
+                android:layout_width="252dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="8dp"
+                android:text="Kaki Farm produces citrus, persimmons, fruits and vegetables like asparagus. Kaki Farm also produces eggs and keeps 400 pastured chickens throughout the farm. They eat grass and are supplemented with fruit and vegetable scraps."
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/kaki_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/kakiImg"
+                app:layout_constraintTop_toBottomOf="@+id/kakiFarmsTxt" />
+
+            <TextView
+                android:id="@+id/massa_summary"
+                android:layout_width="252dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="8dp"
+                android:text="Located near Chico in the fertile Sacramento Valley of Northern California, Massa Organics is part farm, part experiment, and all labor of love.
+
+We’re passionate about giving people access to healthy, delicious foods, farmed in a manner that restores the health of our soil, ecosystems, and climate"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/kaki_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/kakiImg"
+                app:layout_constraintTop_toBottomOf="@+id/massaOrganicsTxt" />
+
+            <TextView
+                android:id="@+id/oya_summary"
+                android:layout_width="252dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="8dp"
+                android:text="At Oya, we use agroecological farming practices learned and perfected in California and Oaxaca, Mexico along with philosophical influences from Japan. Our diverse background influences not only what we farm, but how we farm."
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/kaki_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/kakiImg"
+                app:layout_constraintTop_toBottomOf="@+id/oyaOrganicsTxt" />
+
+            <TextView
+                android:id="@+id/blue_heron_summary"
+                android:layout_width="252dp"
+                android:layout_height="73dp"
+                android:layout_marginTop="8dp"
+                android:text="Blue Heron Farms is located in a sheltered valley blessed with a cool climate and soil that is soft and easy to work with. Both Dennis and Lori agree that their greatest asset is the people who they work with, including a wonderful group of men from Jalisco and Michoacan, Mexico, and a dedicated farmers’ market staff. "
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/kaki_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/kakiImg"
+                app:layout_constraintTop_toBottomOf="@+id/oyaOrganicsTxt2" />
+
+            <TextView
+                android:id="@+id/massa_summary4"
+                android:layout_width="251dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="8dp"
+                android:text="Frog Hollow Farm supports the health of life forms both big and small, from our trees and the crew that cares for them down to the billions of microorganisms that reside in our soil. "
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/kaki_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/kakiImg"
+                app:layout_constraintTop_toBottomOf="@+id/frogHollowTxt2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

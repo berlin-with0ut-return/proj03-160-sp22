@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class ProductDetail extends AppCompatActivity {
 
+    Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,19 @@ public class ProductDetail extends AppCompatActivity {
                 openReview();
             }
         });
+
+        Button button2 = (Button) findViewById(R.id.add_cart);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openReview();
+            }
+        });
+    }
+
+    public void addCart() {
+        button2.setText("Added");
+        button2.setEnabled(false);
     }
 
     public void openReview() {
